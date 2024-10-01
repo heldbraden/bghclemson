@@ -1,0 +1,97 @@
+/*Color Palette*/
+:root {
+    --BACKGROUND: #282A2D;
+    --HOVER: #BDC1C6;
+    --TEXT: #f1f3f4;
+    --SUBTEXT: #DADCE0;
+    --ACCENT: #FF5F15;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-container-two {
+    display: block;
+    position: relative;
+}
+
+.link-container {
+    display: block;
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.collection-links {
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.collection-links:hover {
+    background-color: var(--HOVER);
+    color: black;
+}
+
+.page-header {
+    display: block;
+}
+
+.content-container {
+    margin-top: 50px;
+}
+
+#search-form {
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+/* Card Object */
+#album_list_container {
+    margin-top: 50px;
+}
+
+.cardObject {
+    padding: 20px 0;
+    text-align: center;
+    color: black;
+    margin: 5px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.cardObject:hover {
+    background-color: var(--HOVER);
+    color: black;
+}
+
+.itemPic {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-size: cover !important;
+}
+
+.itemTitle {
+    font-size: 20px;
+    padding: 20px 0 10px;
+    text-align: center;
+}
+
+.itemPrice {
+    text-align: center;
+    font-size: 14px;
+}

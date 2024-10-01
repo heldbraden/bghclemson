@@ -1,0 +1,21 @@
+#wordList {
+    max-height: 300px;
+    width: 75px;
+    overflow-y: auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#dropArea {
+    border: 1px solid black;
+    width: 75px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#buttons {
+    margin: 5px;
+    padding: 5px;
+    height: 10px;
+    width: 10px;
+}

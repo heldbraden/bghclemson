@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Changer</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="scripts.js" async></script>
+</head>
+<body>
+
+    <!--Navigation Bar-->
+    <div class="nav-container">
+        <nav>
+            <!--Navigation Links-->
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><span class="material-symbols-outlined">menu</span></label>
+            <div class="content">
+                <ul class="links">
+                    <li><a href="/">Home</a></li>
+                    <li>
+                        <input type="checkbox" id="show-assignments">
+                        <label for="show-assignments">Assignments</label>
+                        <ul>
+                            <li><a href="/Assignments/DemoHTML&CSS/index.html">Demo HTML & CSS</a></li>
+                            <li><a href="/Assignments/BasicFixedFluidHybridLayout/layout.html">Basic Fixed Fluid Hybrid Layout</a></li>
+                            <li><a href="/Assignments/JavascriptEvents/chapter04.html">Javascript Events</a></li>
+                            <li><a href="/Assignments/PHPHelloWorld/helloworld.php">PHP Hello World</a></li>
+                            <li><a href="/Assignments/BandStoreSetup/index.html">Band Store Setup</a></li>
+                            <li><a href="/Assignments/MovingButtons/ButtonMove.html">Moving Buttons</a></li>
+                            <li><a href="/Assignments/JavascriptSort/sort.html">Javascript Sort</a></li>
+                            <li><a href="/Assignments/CardObject/cards.html">Card Object</a></li>
+                            <li><a href="/Assignments/Keypress/keypress.html">Keypress</a></li>
+                            <li><a href="/Assignments/JQuery/">JQuery</a></li>
+                            <li><a href="/Assignments/531690/">AJAX & Handlebars</a></li>
+                            <li><a href="/Assignments/957246/livesearch.html">AJAX & PHP</a></li>
+                            <li><a href="/Assignments/239047/index.html">DMMT #2</a></li>
+                            <li><a href="/Assignments/481123/fileIO.html">PHP File I/O</a></li>
+                            <li><a href="/Assignments/Chapter18/insert_form.html">Test DB</a></li>
+                            <li><a href="/Assignments/794573/createDB.html">Create DB</a></li>
+                            <li><a href="/Assignments/678234/showcalendar_inJS.html">TextBook App</a></li>
+                            <li><a href="/Assignments/624043">Usability Test</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="show-projects">
+                        <label for="show-projects">Projects</label>
+                        <ul>
+                            <li><a href="/Projects/827091">Audio Changer</a></li>
+                            <li><a href="/Projects/775319/collectApp.html">Collect App Phase 1</a></li>
+                            <li><a href="/Projects/324795/login.php">Collect App Phase 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="show-programming-exams">
+                        <label for="show-programming-exams">Programming Exams</label>
+                        <ul>
+                            <li><a href="/410823/prime.html">#1</a></li>
+                            <li><a href="/ProgrammingExams/285134/index.html">#2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/About/">About</a></li>
+                </ul>
+            </div>
+
+            <!--Centered Logo-->
+            <div class="center-logo"><a href="/">BGH - CPSC3750</a></div>
+
+            <!--Search-->
+            <input type="checkbox" id="show-search">
+            <label for="show-search" class="search-icon"><span class="material-symbols-outlined">search</span></label>
+            <form action="#" class="search-box">
+                <input type="text" placeholder="Search..." required>
+            </form>
+        </nav> 
+    </div>
+
+    <audio id="myaudio" src="Hurricanes-Sharks-1017-NHL-Highl.mp3"></audio>
+    <div style="height: 100%; margin-top: 64px;">
+        <h1>Hurricanes @ Sharks 10-17-23 NHL Highlights</h1>
+        <h3>Playlist</h3>
+        <ul id="playlist">
+            <li><button class="list" onclick="goToTime(3)">1st Period</button></li>
+            <li><button class="list" onclick="goToTime(34)">Sharks Goal 1</button></li>
+            <li><button class="list" onclick="goToTime(87)">Hurricanes Goal 1</button></li>
+            <li><button class="list" onclick="goToTime(147)">2nd Period</button></li>
+            <li><button class="list" onclick="goToTime(170)">Hurricanes Goal 2</button></li>
+            <li><button class="list" onclick="goToTime(306)">3rd Period</button></li>
+        </ul>
+    </div>
+
+    <div>
+        <label for="add">Add A Title:</label>
+        <input type="text" id="add">
+        <button id="btn" onclick="addTitle();">ADD</button>
+    </div>
+
+    <button class="btn" id="btn-back-five" onclick="rewind()"><span class="material-symbols-outlined">fast_rewind</span></button> 
+    <button class="btn" id="btn-pause" onclick="pauseplay()">Play</button> 
+    <button class="btn" id="btn-forward-five" onclick="forward()"><span class="material-symbols-outlined">fast_forward</span></button> 
+
+    <div id="audioInfo">
+        <span id="currentTime">0:00</span> 
+            <div class="progress">
+                <div class="bar"></div>
+            </div> 
+        <span id="duration">0:00</span>
+    </div>
+      
+</body>
+</html>

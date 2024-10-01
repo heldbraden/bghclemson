@@ -1,0 +1,193 @@
+/*Color Palette*/
+:root {
+    --BACKGROUND: #282A2D;
+    --HOVER: #BDC1C6;
+    --TEXT: #f1f3f4;
+    --SUBTEXT: #DADCE0;
+    --ACCENT: #FF5F15;
+}
+
+/*All*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Nav*/
+.nav-container {
+    width: 100%;
+    position: fixed;
+    background: var(--BACKGROUND);
+    top: 0;
+}
+
+.nav-container nav {
+    height: 64px;
+    max-width: calc(100% - 100px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+nav .content {
+    display: flex;
+    align-items: center;
+}
+
+nav .content .links {
+    display: flex;
+}
+
+.content .links li {
+    line-height: 64px;
+    list-style: none;
+}
+
+.content .links li a,
+.content .links li label {
+    padding: 9px 17px;
+    color: var(--TEXT);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.content .links li label {
+    display: none;
+}
+
+.content .links li a:hover,
+.content .links li label:hover {
+    background: var(--HOVER);
+    color: var(--BACKGROUND);
+}
+
+.nav-container .search-icon,
+.nav-container .menu-icon {
+    width: 64px;
+    text-align: center;
+    line-height: 64px;
+    color: var(--TEXT);
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.nav-container .menu-icon {
+    display: none;
+}
+
+.nav-container .search-box {
+    height: 100%;
+    width: 100%;
+    max-width: calc(100% - 50px);
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.nav-container #show-search:checked ~ .search-box {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    padding: 0 100px 0 15px;
+    background: var(--BACKGROUND);
+    color: var(--TEXT);
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: var(--SUBTEXT);
+}
+
+.nav-container input[type="checkbox"] {
+    display: none;
+}
+
+.nav-container .menu-icon {
+    display: block;
+}
+
+nav .content .links {
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    display: block;
+    background: var(--BACKGROUND);
+    top: 64px;
+    left: -100%;
+    margin-left: 0;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+}
+
+nav #show-menu:checked ~ .content .links {
+    left: 0%;
+}
+
+.content .links li {
+    margin: 15px 20px;
+}
+
+.content .links li a,
+.content .links li label {
+    display: block;
+    padding: 8px 18px;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.content .links ul,
+.content .links ul ul {
+    max-height: 0px;
+    position: static;
+    background: var(--ACCENT);
+    border-radius: 2px;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+}
+
+.content .links #show-assignments:checked ~ ul,
+.content .links #show-projects:checked ~ ul,
+.content .links #show-programming-exams:checked ~ ul {
+    max-height: 100vh;
+}
+
+.content .links ul li {
+    margin: 7px 20px;
+}
+
+.content .links ul li a {
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 2px;
+}
+
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-logo a {
+    color: var(--ACCENT);
+    font-size: 32px;
+    font-weight: 600;
+}
